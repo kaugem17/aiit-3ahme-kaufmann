@@ -12,5 +12,6 @@
 | Kapitel 8 | [Java Projekt ACHT](https://github.com/kaugem17/aiit-3ahme-kaufmann/tree/master/Kaufmann_Corona/src/kapitel8) |
 | Kapitel 9 | [Java Projekt NEUN](https://github.com/kaugem17/aiit-3ahme-kaufmann/tree/master/Kaufmann_Corona/src/kapitel9) |
 | Taschenrechner | [Java Projekt TASCHENRECHNER](https://github.com/kaugem17/aiit-3ahme-kaufmann/tree/master/Kaufmann_Corona/src/ue01_taschenrechner) |
+| Serienschaltung | [Java Projekt SERINSCHALTUNG](https://github.com/kaugem17/aiit-3ahme-kaufmann/tree/master/Kaufmann_Corona/src/ue02_serienschaltung) |
 
 ----------------------------------
