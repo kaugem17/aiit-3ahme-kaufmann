@@ -4,8 +4,8 @@
 
 ## Inhalt
 
-| Kapitel | Projekt |
-| ------- | ---- |
+| | Kapitel | Projekt | |
+| -- | ------- | ---- | -- |
 | Kapitel 5 | [Projekt FÜNF](https://github.com/kaugem17/aiit-3ahme-kaufmann/tree/master/Kaufmann_Corona/src/kapitel5) |
 | Kapitel 6 | [Projekt SECHS](https://github.com/kaugem17/aiit-3ahme-kaufmann/tree/master/Kaufmann_Corona/src/kapitel6) |
 | Kapitel 7 | [Projekt SIEBEN](https://github.com/kaugem17/aiit-3ahme-kaufmann/tree/master/Kaufmann_Corona/src/kapitel7) |
