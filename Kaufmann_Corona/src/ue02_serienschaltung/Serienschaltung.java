@@ -16,21 +16,21 @@ public class Serienschaltung {
         }
     }
 
-    public void addWiderstand(double widerstandInOhm) {
-        try {
-            if (widerstandsFeld == null) {
-                widerstandsFeld = new double[1];
-                widerstandsFeld[0] = widerstandInOhm;
-            } else {
-                double tmp[];
-                tmp = new double[widerstandsFeld.length + 1];
-                System.arraycopy(widerstandsFeld, 0, tmp, 0, widerstandsFeld.length);
-                tmp[tmp.length - 1] = widerstandInOhm;
-                widerstandsFeld = tmp;
-            } 
-        } catch (Exception e) {
-          
-        }
+    public void addWiderstand(double widerstandInOhm) throws InvalidResistorValueException {
+        if (widerstandInOhm < 0 || widerstandInOhm > 10E6) {
+            throw new InvalidResistorValueException(widerstandInOhm);
+        }   
+        
+        if (widerstandsFeld == null) {
+            widerstandsFeld = new double[1];
+            widerstandsFeld[0] = widerstandInOhm;
+        } else {
+            double tmp[];
+            tmp = new double[widerstandsFeld.length + 1];
+            System.arraycopy(widerstandsFeld, 0, tmp, 0, widerstandsFeld.length);
+            tmp[tmp.length - 1] = widerstandInOhm;
+            widerstandsFeld = tmp;
+        } 
         
         updateSpannung();
     }

@@ -4,10 +4,8 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/Users/georgkaufmann/Desktop/Kaufmann_Corona/src/ue02_serienschaltung/SerienschaltungRechner.java</file>
-            <file>file:/Users/georgkaufmann/Desktop/Kaufmann_Corona/src/ue02_serienschaltung/Scanner.java</file>
             <file>file:/Users/georgkaufmann/Desktop/Kaufmann_Corona/src/ue02_serienschaltung/InvalidResistorValueException.java</file>
             <file>file:/Users/georgkaufmann/Desktop/Kaufmann_Corona/src/ue02_serienschaltung/TestFailedException.java</file>
-            <file>file:/Users/georgkaufmann/Desktop/Kaufmann_Corona/src/ue01_taschenrechner/TestTaschenrechner.java</file>
             <file>file:/Users/georgkaufmann/Desktop/Kaufmann_Corona/src/ue02_serienschaltung/Serienschaltung.java</file>
             <file>file:/Users/georgkaufmann/Desktop/Kaufmann_Corona/src/ue02_serienschaltung/TestSerienschaltung.java</file>
         </group>
