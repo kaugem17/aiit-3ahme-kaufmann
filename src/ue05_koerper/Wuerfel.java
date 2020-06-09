@@ -1,14 +1,25 @@
 package ue05_koerper;
 
+import java.util.Locale;
+
 /**
  *
  * @author georgkaufmann
  */
         
 public class Wuerfel extends Koerper {
-    private double a;
+    
+    private double a; //Kantenlaenge
 
-    public Wuerfel(double a, double dichte) {
+    public Wuerfel(double a) {
+        super(0.0);
+        if(a <= 0) {
+            throw new IllegalArgumentException("invalid parameter a");
+        }
+        this.a = a;
+    }
+    
+    public Wuerfel(double a, double dichte) throws IllegalArgumentException {
         super(dichte);
         this.a = a;
     }
@@ -20,20 +31,20 @@ public class Wuerfel extends Koerper {
     public void setA(double a) {
         this.a = a;
     }
-
+    
     @Override
-    public double oberfläche() {
-        return a * a * 6;
+    public double oberflaeche() {
+        return 6 * a * a;
     }
 
     @Override
     public double volumen() {
         return a * a * a;
-    } 
+    }
 
     @Override
     public String toString() {
-        return "Wuerfel{" + "a =" + a + '}';
+        return String.format(Locale.ENGLISH, "{\"a\":%e,\"dichte\":%e}", a, dichte);
     }
 }
 
