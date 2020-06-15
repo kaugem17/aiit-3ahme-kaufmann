@@ -7,8 +7,8 @@ package ue05_koerper;
 
 public abstract class Koerper {
     protected double dichte;
-    public double DICHTE_EICHE = 670;
-    public double DICHTE_BUCHE = 690;
+    public static final double DICHTE_EICHE = 670;
+    public static final double DICHTE_BUCHE = 690;
 
     public Koerper(double dichte) {
         if (dichte < 0) {
