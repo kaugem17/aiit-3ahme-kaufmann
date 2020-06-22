@@ -43,6 +43,6 @@ public class Kugel extends Koerper {
     
     @Override
     public String toString() {
-        return String.format(Locale.ENGLISH, "\"r\":%e,\"diche\":%e", r, dichte);
+        return String.format(Locale.ENGLISH, "{\"r\":%e,\"dichte\":%e}", r, dichte);
     }
 }

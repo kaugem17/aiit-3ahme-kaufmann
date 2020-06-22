@@ -9,21 +9,16 @@ import java.util.List;
  * @author georgkaufmann
  */
 
-public class KoerperGruppe {
+public class KoerperGruppe{
     private final List<Koerper> koerperListe = new ArrayList<>();
     private double dichte;
 
     public KoerperGruppe() {
-        
     }
-    
-    public KoerperGruppe(Collection<Koerper> koerperListe, double dichte) {
+
+    public KoerperGruppe (Collection<Koerper> koerperListe, double dichte) {
         this.koerperListe.addAll(koerperListe);
-        this.dichte = dichte;
-        
-        for(Koerper k : this.koerperListe) {
-            k.setDichte(dichte);
-        }
+        setDichte(dichte);
     }
 
     public int size() {
@@ -34,7 +29,12 @@ public class KoerperGruppe {
         return koerperListe.contains(k);
     }
 
+    public Object[] toArray() {
+        return koerperListe.toArray();
+    }
+
     public boolean add(Koerper k) {
+        k.setDichte(dichte);
         return koerperListe.add(k);
     }
 
@@ -46,9 +46,8 @@ public class KoerperGruppe {
         return dichte;
     }
 
-    public void setDichte(double dichte) {
+    public final void setDichte(double dichte) {
         this.dichte = dichte;
-        
         for(Koerper k : this.koerperListe) {
             k.setDichte(dichte);
         }
@@ -58,25 +57,17 @@ public class KoerperGruppe {
         return koerperListe;
     }
     
-    public Koerper[] toArray() {
-        Koerper [] rv = new Koerper [koerperListe.size()];
-        koerperListe.toArray(rv);
-        return rv;
-    }
-    
     public double gesamtMasse() {
         double rv = 0.0;
-        
-        for(Koerper k: koerperListe) {
+        for(Koerper k: this.koerperListe) {
             rv += k.masse();
         }
         return rv;
     }
     
-    public  double gesamtVolumen() {
+    public double gesamtVolumen() {
         double rv = 0.0;
-        
-        for(Koerper k: koerperListe) {
+        for(Koerper k: this.koerperListe) {
             rv += k.volumen();
         }
         return rv;
@@ -97,7 +88,5 @@ public class KoerperGruppe {
         }
         sb.append("\n]");
         return sb.toString();
-    }
-    
-    
+    }  
 }

@@ -71,6 +71,6 @@ public class Quader extends Koerper {
     
     @Override
     public String toString() {
-        return String.format(Locale.ENGLISH, "\"a\":%e,\"b\":%e,\"h\":%e,\"diche\":%e", a, b, h, dichte);
+        return String.format(Locale.ENGLISH, "{\"a\":%e,\"b\":%e,\"h\":%e,\"dichte\":%e}", a, b, h, dichte);
     }
 }

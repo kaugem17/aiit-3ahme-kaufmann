@@ -6,14 +6,16 @@ import java.util.Locale;
  *
  * @author georgkaufmann
  */
-public class Component {
+
+public abstract class Component {
     private String id;
-    private double value;
+    double value;
     private double voltage;
     private double current;
-    
+
     public Component(String id, double value) {
-        
+        this.id = id;
+        this.value = value;
     }
 
     public String getId() {
@@ -41,26 +43,22 @@ public class Component {
     }
     
     public double power() {
-        return current * voltage;
+        return this.current * this.voltage;
     }
     
     public String formattedValue() {
-        return null;
+        return toString();
     }
     
     public String formattedValue(Locale locale) {
-        return null;
+        return toString();
     }
-    
+
+    @Override
     public String toString() {
-        return null;
+        return "Component {" + "id:" + id + ", value:" + value + ", voltage:" + voltage + ", current:" + current + '}';
     }
     
-    public final String unit() {
-        return null;
-    }
-    
-    public final String energy() {
-        return null;
-    }
+    public abstract String unit();
+    public abstract double energy();
 }
