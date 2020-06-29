@@ -6,28 +6,24 @@ package ue06_serienschaltung;
  */
 
 public class Capacitor extends Component {
-    double current;
-    double voltage;
-    
-    public Capacitor(double value) {
-        super(null, 0.0);
-        if (value <= 0) {
-            throw new IllegalArgumentException("invalid parameter value");
-        }
-        this.value = value;
-    }
 
-    public Capacitor(String id, double value) {
+    public Capacitor (double value) {
+        super("C?", value);
+    }
+    
+    public Capacitor (String id, double value) {
         super(id, value);
     }
 
     @Override
-    public double energy() {
-        return current * (voltage * voltage) / 2;
+    public String unit () {
+        return "F";
     }
 
     @Override
-    public String unit() {
-        return String.format("F");
+    public double energy () {
+        return getValue() * getVoltage() * getVoltage() / 2;
     }
+    
 }
+

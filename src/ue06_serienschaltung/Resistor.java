@@ -6,36 +6,35 @@ package ue06_serienschaltung;
  */
 
 public class Resistor extends Component {
-    double current;
-    double voltage;
-    
-    public Resistor(double value) {
-        super(null, 0.0);
-        if (value <= 0) {
-            throw new IllegalArgumentException("invalid parameter value");
-        }
-        this.value = value;
-    }
 
-    public Resistor(String id, double value) {
+    public Resistor (double value) {
+        super("R?", value);
+    }
+    
+    public Resistor (String id, double value) {
         super(id, value);
     }
 
-    public void setCurrent(double current) {
-        this.current = current;
-    }
-
-    public void setVoltage(double voltage) {
-        this.voltage = voltage;
+    @Override
+    public void setCurrent (double current) {
+        super.setCurrent(current); //To change body of generated methods, choose Tools | Templates.
+        super.setVoltage(current * getValue());
     }
 
     @Override
-    public double energy() {
+    public void setVoltage (double voltage) {
+        super.setVoltage(voltage); //To change body of generated methods, choose Tools | Templates.
+        super.setCurrent(voltage / getValue());
+    }
+    
+    @Override
+    public String unit () {
+        return "\u2126";
+    }
+
+    @Override
+    public double energy () {
         return 0;
     }
-
-    @Override
-    public String unit() {
-        return String.format("/u+2126");
-    }
+    
 }
